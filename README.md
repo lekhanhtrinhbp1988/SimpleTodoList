@@ -13,3 +13,7 @@
 - remove-migration => it's not undo change in database
 - Script-Migration -From AddBitcoinDominanceTable -To AddingExclusionCoinsTable > generate migration script sql from A to B
 - Script-Migration 0 Init => generate migration script sql for first migration
+
+## Seed Database
+- https://docs.microsoft.com/en-us/ef/core/modeling/data-seeding
+- https://code-maze.com/migrations-and-seed-data-efcore/
