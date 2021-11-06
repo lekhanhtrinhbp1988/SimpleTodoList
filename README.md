@@ -1,8 +1,8 @@
 # SimpleTodoList
 
 ## EF Core Nuget Package:
-- Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
 - Microsoft.EntityFrameworkCore.SqlServer
+- Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
 - Microsoft.EntityFrameworkCore.Tools
 
 ## EF Core Command:
