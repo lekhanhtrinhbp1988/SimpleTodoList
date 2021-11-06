@@ -17,4 +17,8 @@
 ## What is Antifogery Token
 - https://stackoverflow.com/questions/3955766/what-is-the-html-antiforgerytoken-helper-function-for/3955831
 
+<<<<<<< HEAD
 ## what is the different between asp-validation-summary="ModelOnly" asp-validation-summary="All" ?
+=======
+## What is the different between asp-validation-summary="ModelOnly" asp-validation-summary="All" ?
+>>>>>>> b5bd791d37df5325ca7ded5b5978ab0965d922c5
