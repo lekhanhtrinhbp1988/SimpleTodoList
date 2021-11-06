@@ -1,8 +1,8 @@
 # SimpleTodoList
 
 ## EF Core Nuget Package:
-- Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
 - Microsoft.EntityFrameworkCore.SqlServer
+- Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
 - Microsoft.EntityFrameworkCore.Tools
 
 ## EF Core Command:
@@ -17,4 +17,4 @@
 ## What is Antifogery Token
 - https://stackoverflow.com/questions/3955766/what-is-the-html-antiforgerytoken-helper-function-for/3955831
 
-## what is the different between asp-validation-summary="ModelOnly" asp-validation-summary="All" ?
+## What is the different between asp-validation-summary="ModelOnly" asp-validation-summary="All" ?
