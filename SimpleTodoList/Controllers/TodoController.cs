@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using SimpleTodoList.Entities;
 using SimpleTodoList.Models;
@@ -22,9 +23,16 @@ namespace SimpleTodoList.Controllers
         }
 
         [HttpGet]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var todos = await _context.Todos.AsNoTracking().Select(e => new TodoViewModel
+            {
+                Id = e.Id,
+                Title = e.Title,
+                Description = e.Description
+            }).ToListAsync();
+
+            return View(todos);
         }
 
         [HttpGet]
