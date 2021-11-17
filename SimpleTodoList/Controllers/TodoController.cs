@@ -42,6 +42,32 @@ namespace SimpleTodoList.Controllers
             return View(model);
         }
 
+        [HttpGet]
+        public IActionResult AjaxCreate()
+        {
+            var model = new CreateEditTodoViewModel();
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AjaxCreate(CreateEditTodoViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var newTodo = new Todo
+                {
+                    Title = model.Title,
+                    Description = model.Description
+                };
+                await _context.Todos.AddAsync(newTodo);
+                await _context.SaveChangesAsync();
+
+                return Json(true);
+            }
+            return Json(false);
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(CreateEditTodoViewModel model)
