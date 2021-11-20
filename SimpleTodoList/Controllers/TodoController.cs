@@ -1,15 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using SimpleTodoList.Entities;
-using SimpleTodoList.Models;
+using SimpleTodoList.Core.Entities;
+using SimpleTodoList.Infrastructure;
+using SimpleTodoList.Web.Models;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SimpleTodoList.Controllers
+namespace SimpleTodoList.Web.Controllers
 {
     public class TodoController : Controller
     {

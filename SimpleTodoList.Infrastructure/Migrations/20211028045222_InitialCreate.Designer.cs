@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SimpleTodoList.Entities;
+using SimpleTodoList.Infrastructure;
 
-namespace SimpleTodoList.Migrations
+namespace SimpleTodoList.Infrastructure.Migrations
 {
     [DbContext(typeof(TodoDbContext))]
     [Migration("20211028045222_InitialCreate")]
@@ -20,7 +20,7 @@ namespace SimpleTodoList.Migrations
                 .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("SimpleTodoList.Entities.Todo", b =>
+            modelBuilder.Entity("SimpleTodoList.Infrastructure.Entities.Todo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

@@ -1,10 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using SimpleTodoList.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SimpleTodoList.Entities
+namespace SimpleTodoList.Infrastructure
 {
     public class TodoDbContext : DbContext
     {

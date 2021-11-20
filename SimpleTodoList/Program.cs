@@ -2,13 +2,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using SimpleTodoList.Entities;
+using SimpleTodoList.Core.Entities;
+using SimpleTodoList.Infrastructure;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SimpleTodoList
+namespace SimpleTodoList.Web
 {
     public class Program
     {
