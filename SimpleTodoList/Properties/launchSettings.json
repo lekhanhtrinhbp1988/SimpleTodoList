@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "SimpleTodoList": {
+    "SimpleTodoList.Web": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

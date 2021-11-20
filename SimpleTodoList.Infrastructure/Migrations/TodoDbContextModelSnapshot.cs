@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SimpleTodoList.Entities;
+using SimpleTodoList.Infrastructure;
 
-namespace SimpleTodoList.Migrations
+namespace SimpleTodoList.Infrastructure.Migrations
 {
     [DbContext(typeof(TodoDbContext))]
     partial class TodoDbContextModelSnapshot : ModelSnapshot
@@ -18,7 +18,7 @@ namespace SimpleTodoList.Migrations
                 .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("SimpleTodoList.Entities.Todo", b =>
+            modelBuilder.Entity("SimpleTodoList.Infrastructure.Entities.Todo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
