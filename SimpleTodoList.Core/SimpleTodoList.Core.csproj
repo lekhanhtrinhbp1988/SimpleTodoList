@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\SimpleTodoList.Infrastructure\SimpleTodoList.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

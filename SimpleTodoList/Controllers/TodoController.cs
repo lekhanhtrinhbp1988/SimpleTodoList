@@ -1,12 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using SimpleTodoList.Core.Entities;
+using SimpleTodoList.Core.Services;
 using SimpleTodoList.Infrastructure;
+using SimpleTodoList.Infrastructure.Entities;
 using SimpleTodoList.Web.Models;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,11 +14,13 @@ namespace SimpleTodoList.Web.Controllers
     {
         private readonly ILogger<TodoController> _logger;
         private readonly TodoDbContext _context;
+        private readonly ITodoService _todoService;
 
-        public TodoController(ILogger<TodoController> logger, TodoDbContext context)
+        public TodoController(ILogger<TodoController> logger, TodoDbContext context, ITodoService todoService)
         {
             _logger = logger;
             _context = context;
+            _todoService = todoService;
         }
 
         [HttpGet]
@@ -61,10 +61,10 @@ namespace SimpleTodoList.Web.Controllers
                     Title = model.Title,
                     Description = model.Description
                 };
-                await _context.Todos.AddAsync(newTodo);
-                await _context.SaveChangesAsync();
 
-                return Json(true);
+                var result = await _todoService.Create(newTodo);
+
+                return Json(result);
             }
             return Json(false);
         }
@@ -80,8 +80,8 @@ namespace SimpleTodoList.Web.Controllers
                     Title = model.Title,
                     Description = model.Description
                 };
-                await _context.Todos.AddAsync(newTodo);
-                await _context.SaveChangesAsync();
+
+                await _todoService.Create(newTodo);
 
                 return RedirectToAction(nameof(Index));
             }

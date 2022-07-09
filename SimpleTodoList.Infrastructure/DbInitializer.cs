@@ -1,7 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SimpleTodoList.Core.Entities;
+using SimpleTodoList.Infrastructure.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

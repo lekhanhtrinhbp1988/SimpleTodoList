@@ -1,9 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SimpleTodoList.Core.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using SimpleTodoList.Infrastructure.Entities;
 
 namespace SimpleTodoList.Infrastructure
 {
