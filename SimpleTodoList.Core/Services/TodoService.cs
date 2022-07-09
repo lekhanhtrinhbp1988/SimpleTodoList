@@ -20,5 +20,16 @@ namespace SimpleTodoList.Core.Services
 
             return result > 0;
         }
+
+        public async Task<bool> Delete(int id)
+        {
+            var todo = await _context.Todos.FindAsync(id);
+
+             _context.Todos.Remove(todo);
+
+            var result = await _context.SaveChangesAsync();
+
+            return result > 0;
+        }
     }
 }

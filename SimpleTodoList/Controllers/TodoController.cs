@@ -87,5 +87,13 @@ namespace SimpleTodoList.Web.Controllers
             }
             return View(model);
         }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var result = await _todoService.Delete(id);
+
+            return Json(result);
+        }
     }
 }

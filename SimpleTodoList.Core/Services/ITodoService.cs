@@ -6,5 +6,6 @@ namespace SimpleTodoList.Core.Services
     public interface ITodoService
     {
         Task<bool> Create(Todo todo);
+        Task<bool> Delete(int id);
     }
 }
